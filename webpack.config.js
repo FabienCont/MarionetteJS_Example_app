@@ -16,7 +16,8 @@ var config = {
   plugins: [
      new CleanWebpackPlugin(),
      new HtmlWebpackPlugin({
-       title: 'MarionetteJs'
+       title: 'MarionetteJs',
+       template: path.resolve(__dirname, 'src/index.html')
      }),
      new webpack.ProvidePlugin({
        $: 'jquery',
