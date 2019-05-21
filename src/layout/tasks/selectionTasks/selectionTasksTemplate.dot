@@ -1,0 +1,6 @@
+<div class="checkbox-for-all-container">
+<input type="checkbox" class="checkbox-for-all checkbox-classic" name="{{! it.description }}"
+         {{? it.isSelected}}checked{{?}}>
+<label class="text-classic" for="checkAll">Select All</label>
+<div class="btn-component marionette-wrapper-inline"></div>
+</div>

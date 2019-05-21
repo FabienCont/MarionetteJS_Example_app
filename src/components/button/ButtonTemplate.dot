@@ -1,0 +1,1 @@
+<button {{?it.isDisabled}}disabled{{?}} {{?it.ariaHidden}}aria-hidden="false"{{?}} {{?it.ariaLabel}}aria-label="{{! it.ariaLabel}}"{{?}} class="{{! it.className}}" >{{! it.label}}</button>

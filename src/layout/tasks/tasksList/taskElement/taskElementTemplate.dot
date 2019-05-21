@@ -1,0 +1,16 @@
+<input type="checkbox" name="{{! it.description }}"
+         {{? it.isSelected}}checked{{?}}>
+{{? !it.isInEditMode}}
+  <label class="text-classic" for="{{! it.description }}">{{! it.description }}</label>
+  <div class="svg-container evt-edit">
+    {{=it.svg.edit}}
+  </div>
+  <div class="svg-container evt-delete">
+    {{=it.svg.delete}}
+  </div>
+{{??}}
+  <input type="text" class="input-classic" value="{{! it.description }}" >
+  <div class="svg-container evt-validate">
+      {{=it.svg.validate}}
+  </div>
+{{?}}

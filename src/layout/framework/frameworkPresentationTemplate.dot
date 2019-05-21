@@ -1,0 +1,11 @@
+<img src="{{! it.svg.marionette}}" class="svg-presentation-container">
+<div class="framework-presentation-content-container">
+  <div class="framework-presentation-titles">
+    <span class="framework-presentation-title">Developped with</span>
+    <span class="framework-presentation-title"> Marionette</span>
+  </div>
+  <div class="framework-presentation-btn-list">
+    <a href="https://github.com/FabienCont/" target="_blank" class="btn btn-fat ">My github</a>
+    <a href="https://marionettejs.com/docs/current" target="_blank" class="btn btn-fat btn-fat-secondary-color">Official Doc</a>
+  </div>
+</div>
