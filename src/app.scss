@@ -7,11 +7,6 @@ html,body{
  padding: 0;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-}
-
 .header-app-container{
   display:flex;
   flex:1;
@@ -48,13 +43,14 @@ body{
   }
 }
 
-.container-app{
+.container-content-app{
   margin :0 auto;
   width:90%;
   display: flex; flex: 1;
 }
 
 .framework-presentation-container{
+  position:relative;
   display: flex; flex: 1;justify-content: center;align-items: center;flex-direction: column;
   background-color:#edf3f6;
   height: 23rem;
@@ -67,20 +63,28 @@ body{
 }
 
 @media screen and (min-width: 400px) {
-.framework-presentation-container{
-height: 20rem;
+  .framework-presentation-container{
+    height: 20rem;
+  }
 }
-}
+
 .svg-presentation-container{
   max-height: 12rem ;
   display:flex;
   flex:2;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 920px) {
   .svg-presentation-container{
     flex:1;
   }
+}
+
+.svg-presentation{
+  height: auto;
+  width:auto;
 }
 
 .framework-presentation-content-container {

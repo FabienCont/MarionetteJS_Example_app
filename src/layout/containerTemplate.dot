@@ -1,4 +1,6 @@
-<header id="header-app"></header>
-<div id="framework-presentation"></div>
-<div id="container-app" class="container-app"></div>
-<footer id="footer-app" class="footer-app"></footer>
+<div class="container-app">
+  <header id="header-app"></header>
+  <div id="framework-presentation"></div>
+  <div id="container-content-app" class="container-content-app"></div>
+  <footer id="footer-app" class="footer-app"></footer>
+</div>

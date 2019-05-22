@@ -3,7 +3,7 @@ import template from './containerTemplate.dot';
 const ContainerView = View.extend({
   template: template,
   regions: {
-    container:"#container-app",
+    container:"#container-content-app",
     frameworkPresentation:"#framework-presentation",
     header:"#header-app",
     footer:"#footer-app"
