@@ -1,5 +1,6 @@
-import Router from './router'
 import "./app.scss";
+import './polyfill'
+import Router from './router'
 
 document.addEventListener('DOMContentLoaded', () => {
   const router =new Router();

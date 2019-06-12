@@ -2,5 +2,5 @@
 <form class="form-classic">
    <input type="text" class="input-classic {{? it.error}}input-error{{?}}" placeholder="task name">
    <button type="submit" class="btn">Add</button>
-   {{? it.error}}<p class="text-classic text-error">task "{{! it.errorTaskName}}" already existing</p>{{?}}
+   {{? it.error}}<p class="text-classic text-error">{{! it.errorMessage}}</p>{{?}}
 </form>

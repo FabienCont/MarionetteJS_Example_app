@@ -5,24 +5,29 @@ const AddTaskView = View.extend({
   initialize:function(params){
     if(params){
       this.error=params.error;
-      this.errorTaskName=params.errorTaskName;
+      this.errorMessage=params.errorMessage;
+      this.focus=params.focus;
+    }
+  },
+  onAttach:function(){
+    if(this.focus){
+      this.ui.inputs[0].focus();
     }
   },
   events:{
-    "submit.prevent" :"addTask"
+    "submit" :"addTask"
   },
-  "ui":{
-    "inputs":"input"
+  ui:{
+    inputs:'.input-classic',
   },
   templateContext:function(){
     return{
       error:this.error,
-      errorTaskName:this.errorTaskName
+      errorMessage:this.errorMessage
     }
   },
   addTask:function(event){
-      this.triggerMethod('did:add', this.ui.inputs[0].value);
-      this.ui.inputs[0].value="";
+      this.triggerMethod('did:add', this.$el.find(this.ui.inputs)[0].value);
       return false;
   }
 });

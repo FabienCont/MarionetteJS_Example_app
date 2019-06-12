@@ -7,6 +7,12 @@ html,body{
  padding: 0;
 }
 
+.container-app{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .header-app-container{
   display:flex;
   flex:1;
@@ -44,9 +50,7 @@ html,body{
 }
 
 .container-content-app{
-  margin :0 auto;
-  width:90%;
-  display: flex; flex: 1;
+  display: flex; flex: 1 0 auto; margin :0 auto; width:90%;
 }
 
 .framework-presentation-container{
@@ -69,12 +73,20 @@ html,body{
 }
 
 .svg-presentation-container{
-  max-height: 12rem ;
+  height: 100% ;
   display:flex;
-  flex:2;
+  flex:3;
   align-items: center;
   justify-content: center;
 }
+
+
+@media screen and (min-width: 400px) {
+  .svg{
+    height: 12rem;
+  }
+}
+
 
 @media screen and (min-width: 920px) {
   .svg-presentation-container{
@@ -83,8 +95,9 @@ html,body{
 }
 
 .svg-presentation{
-  height: auto;
+  height: 100%;
   width:auto;
+  max-height: 12rem;
 }
 
 .framework-presentation-content-container {
@@ -215,10 +228,8 @@ html,body{
 
 .svg-container{
   margin: 0 0.5rem 0 0.5rem ;
-  max-width: 20px;
-  max-height: 20px;
-    min-width: 15px;
-    min-height: 15px;
+  width:  1.1rem;
+  height: 1.1rem;
 }
 
 .task-element{

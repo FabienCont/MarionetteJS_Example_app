@@ -15,11 +15,8 @@ const TasksListView = CollectionView.extend({
     'did:delete': 'elementDelete',
     'did:check': 'elementCheck'
   },
-  //sortWithCollection :true, // without this line all the child are rerendered
-  //viewComparator:false,
-
+  sortWithCollection :false, // without this line all the child are rerendered
   initialize(params){
-    //this.filter=function(){return;};
     this.collection=params.collection;
     window.collection=this.collection;
     this.listenTo(this.collection,"change",this.renderChild);
@@ -56,7 +53,7 @@ const TasksListView = CollectionView.extend({
     models.forEach(model=>{
       this.removeModelProperly(model);
     })
-    this.collection.trigger('update',this)
+    this.collection.trigger('syncAfterProperRemove',this.collection);
   },
   removeModelProperly:function(model){
     let childView=this.children.findByModel(model);

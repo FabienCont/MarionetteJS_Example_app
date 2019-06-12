@@ -31,11 +31,13 @@ const TasksView = View.extend({
     this.showChildView('form', new AddTaskView({error:false}));
   },
   addTask:function(description){
-    if(!this.isTaskDescriptionExistInCollection(description)){
-      this.showChildView('form', new AddTaskView({error:false}));
+    if(!this.isTaskDescriptionExistInCollection(description)&&description!=""){
       this.collection.add(new TaskElementModel({description: description,isInEditMode:false}));
+      this.showChildView('form', new AddTaskView({error:false,focus:true}));
     }else {
-      this.showChildView('form', new AddTaskView({error:true,errorTaskName:description}));
+      let errorMessage="";
+      description!=""?errorMessage='Task '+description+' already existing':errorMessage='Task name should be define';
+      this.showChildView('form', new AddTaskView({error:true,errorMessage:errorMessage,focus:true}));
     }
   },
   isTaskDescriptionExistInCollection:function(description){

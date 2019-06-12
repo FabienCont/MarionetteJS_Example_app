@@ -10,7 +10,7 @@ const SelectionTasksView = View.extend({
   },
   ui:{
     checkAll:'input.checkbox-for-all[type="checkbox"]',
-    "inputs":"input"
+    inputs:"input"
   },
   childViewEvents: {
     'did:clickButton': 'buttonClicked'
@@ -24,6 +24,7 @@ const SelectionTasksView = View.extend({
     this.listenTo(this.model,"change",this.updateCheckboxView);
     this.listenTo(this.collection,"add remove",this.updateModels);
     this.listenTo(this.collection,"change update",this.updateModels);
+    this.listenTo(this.collection,"syncAfterProperRemove update",this.updateModels);
   },
   onRender(){
     this.buttonModel=new ButtonModel({label:"delete", isDisabled:true,style:"mini"});
@@ -85,7 +86,7 @@ const SelectionTasksView = View.extend({
   },
   updateCheckboxView:function(){
     var allSelected=this.model.get('allSelected');
-    this.ui.checkAll[0].checked=allSelected
+    this.$el.find(this.ui.checkAll)[0].checked=allSelected
   },
   updateButtonView:function(){
     this.buttonView.render();
